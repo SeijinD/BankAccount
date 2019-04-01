@@ -18,8 +18,22 @@ namespace exercise_1
 
             Console.WriteLine("Δωσε τα στοιχεια σου: ");
             Console.WriteLine("Firstname, Lastname, IBAN");
-            Customer newCustomer = new Customer(Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+            //Customer newCustomer = new Customer(Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+            Customer newCustomer = new Customer();
 
+            newCustomer.FirstName = Console.ReadLine();
+            newCustomer.LastName = Console.ReadLine();
+            try 
+	        {	        
+		        newCustomer.Iban = int.Parse(Console.ReadLine());
+	        }
+	        catch (OverflowException ex)
+	        {
+                Console.WriteLine("Η τιμή ήταν πολύ μεγάλη για ένα Int32.");
+                Console.WriteLine("Ξανα δωσε το IBAN: ");
+                newCustomer.Iban = int.Parse(Console.ReadLine());
+	        }
+            newCustomer.PrintCustomer();    
             do //Επιλογη και ελεγχος Account
             {
                 Console.WriteLine("Επελεξε τι Account θελεις να φτιαξεις: ");

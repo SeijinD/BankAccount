@@ -19,6 +19,8 @@ namespace exercise_1
         private DateTime date; //Ημερομηνια
         public DateTime Date { get { return date; } set { date = value; } }
 
+        public BankAccount() {}
+
         public void PrintType()
         {
             Console.WriteLine("Type: " + type);
