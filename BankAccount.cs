@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise_1
+namespace BankAccount
 {
     class BankAccount
     {
@@ -20,11 +20,5 @@ namespace exercise_1
         public DateTime Date { get { return date; } set { date = value; } }
 
         public BankAccount() {}
-
-        public void PrintType()
-        {
-            Console.WriteLine("Type: " + type);
-        }
-
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise_1
+namespace BankAccount
 {
     class SavingsAccount : BankAccount
     {
@@ -51,7 +51,7 @@ namespace exercise_1
 
         public void PrintSaving(List<string> listSaving)
         {
-            Console.WriteLine("DATE\t\t|  REASON  |  AMOUNT  |  BALANCE  \n -------------------------------------------------");
+            Console.WriteLine("DATE\t\t\t|  REASON  |  AMOUNT  |  BALANCE  \n -------------------------------------------------");
             foreach (var el in listSaving)
                 Console.WriteLine(el);
         }

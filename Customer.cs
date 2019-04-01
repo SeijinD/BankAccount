@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise_1
+namespace BankAccount
 {
     class Customer
     {
@@ -24,10 +24,11 @@ namespace exercise_1
             this.iban = int.Parse(s: iban);
         }
 
-        public void PrintCustomer()
+        public void PrintCustomer(string type)
         {
             Console.WriteLine("IBAN: " + iban);
             Console.WriteLine("Name: " + firstName + " " + lastName);
+            Console.WriteLine("Type: " + type);
         }
 
     }

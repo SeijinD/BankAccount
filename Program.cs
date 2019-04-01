@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise_1
+namespace BankAccount
 {
     class Program
     {
@@ -33,7 +33,7 @@ namespace exercise_1
                 Console.WriteLine("Ξανα δωσε το IBAN: ");
                 newCustomer.Iban = int.Parse(Console.ReadLine());
 	        }
-            newCustomer.PrintCustomer();    
+            
             do //Επιλογη και ελεγχος Account
             {
                 Console.WriteLine("Επελεξε τι Account θελεις να φτιαξεις: ");
@@ -87,8 +87,7 @@ namespace exercise_1
                     }
                 }
                 while (option.ToLower() != "quit");
-                newCustomer.PrintCustomer();
-                account.PrintType();
+                newCustomer.PrintCustomer(account.Type);
                 credit.PrintCredit(creditList);
             }
             else if (account.Type == "SavingAccount")
@@ -118,8 +117,7 @@ namespace exercise_1
                     }
                 }
                 while (option.ToLower() != "quit");
-                newCustomer.PrintCustomer();
-                account.PrintType();
+                newCustomer.PrintCustomer(account.Type);
                 saving.PrintSaving(savingList);
             }
             else if (account.Type == "LotteryAccount")
@@ -149,8 +147,7 @@ namespace exercise_1
                     }
                 }
                 while (option.ToLower() != "quit");
-                newCustomer.PrintCustomer();
-                account.PrintType();
+                newCustomer.PrintCustomer(account.Type);
                 lottery.PrintLottery(lotteryList);
             }
             

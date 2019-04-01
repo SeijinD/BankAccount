@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise_1
+namespace BankAccount
 {
     class CreditAccount : BankAccount
     {
@@ -53,7 +53,7 @@ namespace exercise_1
 
         public void PrintCredit(List<string> listCredit)
         {
-            Console.WriteLine("DATE\t\t|  REASON  |  AMOUNT  |  BALANCE  \n -------------------------------------------------");
+            Console.WriteLine("DATE\t\t\t|  REASON  |  AMOUNT  |  BALANCE  \n -------------------------------------------------");
             foreach (var el in listCredit)
                 Console.WriteLine(el);
         }
